@@ -3,11 +3,11 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="org.apache.cordova.toast_notification"
-    version="0.1.0">
-    <name>Toast Notification</name>
-    <description>Cordova Toast Notification Plugin</description>
+    version="0.2.0">
+    <name>Toasts Notification</name>
+    <description>Cordova Toasts Notification Plugin</description>
     <license>GPL v3</license>
-    <keywords>cordova,toast</keywords>
+    <keywords>cordova,toasts, notification</keywords>
     <repo>https://github.com/Linkpass/Toast.git</repo>
     <issue>https://github.com/Linkpass/Toast/issues</issue>
 

@@ -33,12 +33,10 @@ public class Toast_Notification extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		
 		if (action.equals("toasted")) {
-		
-            //args.getLong(0)
 			
 			JSONObject jo = args.getJSONObject(0);
 			
-			this.startToast(jo.getString("message"), callbackContext); 
+			this.startToast(jo.getString("message"), jo.getString("duration"), callbackContext); 
 			
         }else {
             return false;
@@ -49,11 +47,17 @@ public class Toast_Notification extends CordovaPlugin {
 		
     }
 	
-	private void startToast(String message, CallbackContext callbackContext) {
+	private void startToast(String message, Int duration, CallbackContext callbackContext) {
 	
 		if (message != null && message.length() > 0) {
 		
-			Toast.makeText(cordova.getActivity().getApplicationContext(), message, Toast.LENGTH_LONG).show();
+			if(duration == 0) {
+				int set_duration = Toast.LENGTH_SHORT;
+			}else{
+				int set_duration = Toast.LENGTH_LONG;
+			}
+		
+			Toast.makeText(cordova.getActivity().getApplicationContext(), message, set_duration).show();
 			
 	        callbackContext.success(message);
 		

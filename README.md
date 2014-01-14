@@ -18,7 +18,8 @@ cordova plugins add https://github.com/Linkpass/Toast.git
 
 ```javascript
 var toasted_message = 'Your message to view in Toast';
-Toast_Notification.Toasted(toasted_message);
+var duration = 1; // 1 = LONG duration ~ 0 SHORT duration
+Toast_Notification.Toasted(toasted_message, duration);
 ```
 
 * That's all Folks!! ;)
@@ -26,6 +27,10 @@ Toast_Notification.Toasted(toasted_message);
 
 
 ## CHANGELOG
+
+### 14/01/2014 (vers 0.2.0)
+* Add duration parameter
+* FIX description into files
 
 ### 10/01/2014 (vers 0.1.0)
 * Initial release (Tested with Cordova 3.3.0, platform android v4.3.1)
