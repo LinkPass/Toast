@@ -1,6 +1,6 @@
 /*
  *
- * Toasted plugin for Android
+ * Toasts plugin for Android
  *
  * @Author Linkpass Srl
  *
@@ -13,8 +13,8 @@ var exec = require('cordova/exec');
 
 module.exports = {
 
-    Toasted: function(message) {
-		var options = { "message": message};
+    Toasted: function(message, duration) {
+		var options = { "message": message, "duration" : duration};
         exec( null, null, 'Toast_Notification', 'toasted', [options]);
     },
 };
