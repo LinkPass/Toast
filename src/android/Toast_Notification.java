@@ -49,12 +49,14 @@ public class Toast_Notification extends CordovaPlugin {
 	
 	private void startToast(String message, Int duration, CallbackContext callbackContext) {
 	
+		int set_duration;
+	
 		if (message != null && message.length() > 0) {
 		
 			if(duration == 0) {
-				int set_duration = Toast.LENGTH_SHORT;
+				set_duration = Toast.LENGTH_SHORT;
 			}else{
-				int set_duration = Toast.LENGTH_LONG;
+				set_duration = Toast.LENGTH_LONG;
 			}
 		
 			Toast.makeText(cordova.getActivity().getApplicationContext(), message, set_duration).show();
