@@ -36,7 +36,7 @@ public class Toast_Notification extends CordovaPlugin {
 			
 			JSONObject jo = args.getJSONObject(0);
 			
-			this.startToast(jo.getString("message"), jo.getString("duration"), callbackContext); 
+			this.startToast(jo.getString("message"), jo.getInt("duration"), callbackContext); 
 			
         }else {
             return false;
