@@ -47,7 +47,7 @@ public class Toast_Notification extends CordovaPlugin {
 		
     }
 	
-	private void startToast(String message, Int duration, CallbackContext callbackContext) {
+	private void startToast(String message, int duration, CallbackContext callbackContext) {
 	
 		int set_duration;
 	
